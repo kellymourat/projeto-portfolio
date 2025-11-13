@@ -1,23 +1,22 @@
-const botao = document.getElementById("botao-tema");
+const button = document.getElementById("theme-button");
 const body = document.body;
 
-const temasalvo = localStorage.getItem("tema");
-temaEscuro(temasalvo === "escuro");
+const Savedtheme = localStorage.getItem("theme");
+temaEscuro(Savedtheme === "dark");
 
-function temaEscuro(tipo) {
-  if (tipo == true) {
-    body.classList.add("escuro");
-    botao.innerHTML = '<i class="fa-solid fa-sun"></i>';
+function temaEscuro(type) {
+  if (type == true) {
+    body.classList.add("dark");
+    button.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
-    body.classList.remove("escuro");
-    botao.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    body.classList.remove("dark");
+    button.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 }
-
-botao.addEventListener("click", () => {
-  const isescuro = body.classList.toggle("escuro");
-  temaEscuro(isescuro);
-  localStorage.setItem("tema", isescuro ? "escuro" : "claro");
+button.addEventListener("click", () => {
+  const isDark = body.classList.toggle("dark");
+  temaEscuro(isDark);
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 const navLinks = document.querySelectorAll("#menu ul a.link");
