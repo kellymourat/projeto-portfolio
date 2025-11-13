@@ -27,6 +27,8 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky;
+  top: 0;
 }
 
 nav#menu ul {
@@ -119,26 +121,18 @@ article h2 {
   margin-bottom: 2rem;
 }
 
-.video-container {
-  position: relative;
-  width: 100%;
+.portfolio-video {
+  display: block;
   margin: auto;
-  aspect-ratio: 16/9;
-}
-
-.video-container .portfolio-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  margin-bottom: 2rem;
   height: 100%;
-  border-radius: 0.5rem;
+  border-radius: 1.4rem;
 }
 
 .skills-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 50px;
+  gap: 3.1rem;
 }
 
 .skills {
