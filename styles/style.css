@@ -63,7 +63,7 @@ section#form {
   grid-column: 2;
 }
 
-section#form img.photo {
+section#form .photo {
   width: 12.5rem;
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -126,13 +126,13 @@ article h2 {
   aspect-ratio: 16/9;
 }
 
-.video-container video {
+.video-container .portfolio-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .skills-container {
@@ -187,7 +187,7 @@ article h2 {
   border-radius: 1rem;
   border-left: 0.2rem solid var(--destaque);
   padding-left: 0.6rem;
-  transition: border-width 0.6s border-color 0.5s;
+  transition: border-width 0.6s, border-color 0.5s;
 }
 
 .course:hover {
@@ -196,20 +196,83 @@ article h2 {
   border-color: var(--destaque-inverso);
 }
 
-.period{
- font-size: 0.8em;
- font-weight: bold;
- color: var(--texto);
+.period {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--texto);
 }
 
 .institution-name {
- color: var(--destaque-inverso);
- font-size: 1.1em;
+  color: var(--destaque-inverso);
+  font-size: 1.1em;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.2rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background-color: var(--fundo-principal);
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border-left: 0.3rem solid var(--destaque-inverso);
+  transition: border-color 0.5s, border-width 0.5s;
+}
+
+.project:hover {
+  border-color: var(--destaque);
+  border-left-width: 0.9rem;
+  cursor: pointer;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
 }
 
 /* Responsividade: duas colunas a partir de 768px */
 @media screen and (min-width: 768px) {
   .skills-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .project-container .project {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .project-info {
+    max-width: 80%;
+  }
+
+  .photo {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-width: 12.5rem;
   }
 }
