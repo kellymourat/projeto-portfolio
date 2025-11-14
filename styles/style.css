@@ -1,6 +1,6 @@
 :root {
   --fundo-principal: #f5f5f5;
-  --texto: #222222;
+  --texto: #181818;
   --texto-inverso: #ffffff;
   --destaque: #690a98;
   --destaque-inverso: #8458ab;
@@ -17,16 +17,17 @@ body.dark {
   --fundo-principal: #222222;
   --texto: #fdfdfd;
   --texto-inverso: #0a0a0a;
-  --destaque: #21d1f0;
-  --destaque-inverso: #84cfe2;
+  --destaque: #51d4ee;
+  --destaque-inverso: #249df3;
   --fundo-card: #444444;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  overflow-x: hidden;
   transition: backgrond-color 0.5s, color 0.5s;
 }
 
@@ -39,6 +40,9 @@ header {
   align-content: center;
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 nav#menu ul {
@@ -63,20 +67,20 @@ nav#menu a:hover {
 
 main {
   display: grid;
-  grid-template-columns: auto 90vw auto;
+  grid-template-columns: auto 90vw 1fr;
+  gap: 1.2rem;
   margin-top: 0.8rem;
 }
 
 section#form {
   background-color: var(--fundo-card);
-  padding: 0.8rem;
-  margin-bottom: 1rem;
   border-radius: 1rem;
+  padding: 1rem;
   grid-column: 2;
+  position: sticky;
 }
 
 section#form p {
-  font-size: 1.6rem;
   text-align: justify;
   hyphens: auto;
   max-width: 90%;
@@ -98,7 +102,7 @@ section#form .photo {
 }
 
 section#form h1 {
-  color: var(--destaque);
+  color: var(--fundo-card);
   margin: 1.6rem 0;
   font-size: 2.1em;
   text-align: center;
@@ -151,10 +155,10 @@ article i {
 .portfolio-video {
   display: flex;
   width: 100%;
-  max-width: 700px;
+  height: 90%;
+  max-width: 500px;
   margin: auto;
   margin-bottom: 2rem;
-  height: 100%;
   border-radius: 1.4rem;
 }
 
@@ -183,7 +187,7 @@ article i {
 
 .skill .percent {
   font-weight: bold;
-  color: var(--destaque);
+  color: var(--texto);
 }
 
 .skill .bar {
@@ -263,13 +267,12 @@ article i {
 
 footer {
   background-color: var(--destaque);
-  color: var(--texto-inverso);
+  color: var(--fundo-card);
   text-align: center;
-  padding: 0.5rem;
 }
 
 footer a {
-  color: var(--texto-inverso);
+  color: var(--fundo-card);
   text-decoration: none;
   font-weight: bold;
 }
@@ -280,8 +283,23 @@ footer a:hover {
 
 /* Responsividade: duas colunas a partir de 768px */
 @media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: auto 350px 1fr auto;
+  }
+
+  section#form {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 4.6rem;
+  }
+
   section#form p {
-    font-size: 1.9rem;
+    font-size: 0.9rem;
+  }
+
+  section#details {
+    grid-column: 3 / 4;
   }
 
   .skills-container {
