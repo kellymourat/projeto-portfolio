@@ -23,7 +23,7 @@ body.dark {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
@@ -40,9 +40,7 @@ header {
   align-content: center;
   position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
+  z-index: 1;
 }
 
 nav#menu ul {
@@ -68,23 +66,24 @@ nav#menu a:hover {
 main {
   display: grid;
   grid-template-columns: auto 90vw 1fr;
+  min-height: 100vh;
   gap: 1.2rem;
-  margin-top: 0.8rem;
+  margin-top: 0.9rem;
 }
 
 section#form {
   background-color: var(--fundo-card);
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 0.9rem;
   grid-column: 2;
   position: sticky;
+  padding: 0.9rem;
+  align-self: flex-start;
 }
 
 section#form p {
   text-align: justify;
   hyphens: auto;
   max-width: 90%;
-  line-height: 1.5;
   margin: auto;
 }
 
@@ -98,7 +97,7 @@ section#form .photo {
   outline: 0.3rem solid var(--destaque);
   display: block;
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 section#form h1 {
@@ -112,9 +111,8 @@ div#social {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6em;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 1rem;
 }
 
 div#social a {
@@ -275,13 +273,13 @@ footer a {
   color: var(--fundo-card);
   text-decoration: none;
   font-weight: bold;
+  
 }
 
 footer a:hover {
   color: var(--destaque-inverso);
 }
 
-/* Responsividade: duas colunas a partir de 768px */
 @media screen and (min-width: 768px) {
   main {
     grid-template-columns: auto 350px 1fr auto;
@@ -289,13 +287,14 @@ footer a:hover {
 
   section#form {
     grid-column: 2 / 3;
-    height: fit-content;
+    max-height: fit-content;
     position: sticky;
     top: 4.6rem;
+  
   }
 
   section#form p {
-    font-size: 0.9rem;
+    font-size: 0.9em;
   }
 
   section#details {
