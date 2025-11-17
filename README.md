@@ -61,11 +61,16 @@ Este portfólio é uma **Single Page Application (SPA) estática**, ou seja, tod
 
 ---
 
+## 🌐 Acesso ao Projeto
+
+Você pode acessar o portfólio online através do link:  
+[Portfólio Kelly Teixeira](https://kellymourat.github.io/portifolio/)
+
+---
+
 ## 🚀 Como Executar Localmente
 
 1. Clonar o repositório:
    ```bash
    git clone https://github.com/kellymourat/portifolio.git
-
-
 
