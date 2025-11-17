@@ -25,7 +25,7 @@ navLinks.forEach((link) => {
     e.preventDefault();
     const href = this.getAttribute("href");
 
-    if (href === "#form") {
+    if (href === "#profile") {
       window.scrollTo({
         top: 0,
         behavior: "smooth",

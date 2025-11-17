@@ -46,7 +46,7 @@ header {
 nav#menu ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 nav#menu a {
@@ -67,43 +67,43 @@ main {
   display: grid;
   grid-template-columns: auto 90vw 1fr;
   min-height: 100vh;
-  gap: 1.2rem;
+  gap: 1.1rem;
   margin-top: 0.9rem;
 }
 
-section#form {
+section#profile {
   background-color: var(--fundo-card);
   border-radius: 0.9rem;
   grid-column: 2;
   position: sticky;
-  padding: 0.9rem;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
   align-self: flex-start;
 }
 
-section#form p {
+section#profile p {
   text-align: justify;
   hyphens: auto;
   max-width: 90%;
   margin: auto;
 }
 
-section#form .photo {
-  width: 12.5rem;
+section#profile .photo {
+  width: 9.5rem;
   aspect-ratio: 1/1;
   object-fit: cover;
   overflow: hidden;
   border-radius: 50%;
-  border: 0.3rem solid var(--fundo-card);
-  outline: 0.3rem solid var(--destaque);
+  border: 0.1rem solid var(--fundo-card);
+  outline: 0.2rem solid var(--destaque);
   display: block;
   margin: auto;
-  margin-bottom: 1rem;
 }
 
-section#form h1 {
-  color: var(--fundo-card);
-  margin: 1.6rem 0;
-  font-size: 2.1em;
+section#profile h1 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.1em;
   text-align: center;
 }
 
@@ -273,7 +273,6 @@ footer a {
   color: var(--fundo-card);
   text-decoration: none;
   font-weight: bold;
-  
 }
 
 footer a:hover {
@@ -282,18 +281,17 @@ footer a:hover {
 
 @media screen and (min-width: 768px) {
   main {
-    grid-template-columns: auto 350px 1fr auto;
+    grid-template-columns: auto 450px 1fr auto;
   }
 
-  section#form {
+  section#profile {
     grid-column: 2 / 3;
     max-height: fit-content;
     position: sticky;
-    top: 4.6rem;
-  
+    top: 4rem;
   }
 
-  section#form p {
+  section#profile p {
     font-size: 0.9em;
   }
 
